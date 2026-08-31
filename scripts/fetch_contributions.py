@@ -80,6 +80,5 @@ if __name__ == "__main__":
         sys.exit(1)
 
     data = fetch(sys.argv[1])
-    Path("data").mkdir(exist_ok=True)
-    Path("data/contributions.json").write_text(json.dumps(data, indent=2))
-    print(f"wrote data/contributions.json ({data['total_active_days']} active days)")
+    Path("contributions.json").write_text(json.dumps(data, indent=2))
+    print(f"wrote contributions.json ({data['total_active_days']} active days)")

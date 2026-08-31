@@ -22,7 +22,7 @@ TOP_PAD = 20
 
 
 def load_data() -> dict:
-    return json.loads(Path("data/contributions.json").read_text())
+    return json.loads(Path("contributions.json").read_text())
 
 
 def week_columns(days: list[dict]) -> list[list[dict]]:
