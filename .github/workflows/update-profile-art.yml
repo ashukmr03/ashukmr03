@@ -35,16 +35,16 @@ jobs:
       - name: Render heatmap
         run: python scripts/render_heatmap_svg.py
 
-      - name: Save generated files
+      - name: Move generated files
         run: |
           mkdir -p /tmp/heatmap
-          cp contributions.json /tmp/heatmap/
-          cp contrib-heatmap.svg /tmp/heatmap/
+          mv contributions.json /tmp/heatmap/
+          mv contrib-heatmap.svg /tmp/heatmap/
 
       - name: Checkout data branch
         run: |
           git fetch origin data
-          git checkout data
+          git checkout -B data origin/data
 
       - name: Copy generated files
         run: |
