@@ -27,5 +27,6 @@ jobs:
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
+          branch: data
           commit_message: "chore: refresh contribution heatmap [skip ci]"
           file_pattern: "data/contributions.json contrib-heatmap.svg"
