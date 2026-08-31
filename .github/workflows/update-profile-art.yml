@@ -19,6 +19,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -34,9 +35,32 @@ jobs:
       - name: Render heatmap
         run: python scripts/render_heatmap_svg.py
 
-      - name: Commit generated files to data branch
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          branch: data
-          commit_message: "chore: refresh contribution heatmap [skip ci]"
-          file_pattern: "contributions.json contrib-heatmap.svg"
+      - name: Save generated files
+        run: |
+          mkdir -p /tmp/heatmap
+          cp contributions.json /tmp/heatmap/
+          cp contrib-heatmap.svg /tmp/heatmap/
+
+      - name: Checkout data branch
+        run: |
+          git fetch origin data
+          git checkout data
+
+      - name: Copy generated files
+        run: |
+          cp /tmp/heatmap/contributions.json .
+          cp /tmp/heatmap/contrib-heatmap.svg .
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add contributions.json contrib-heatmap.svg
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: refresh contribution heatmap [skip ci]"
+            git push origin data
+          fi
