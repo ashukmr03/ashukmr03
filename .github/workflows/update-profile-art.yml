@@ -30,7 +30,7 @@ jobs:
         run: pip install requests beautifulsoup4
 
       - name: Fetch contributions
-        run: python scripts/fetch_contributions.py nilesh24rit
+        run: python scripts/fetch_contributions.py ashukmr03
 
       - name: Render heatmap
         run: python scripts/render_heatmap_svg.py

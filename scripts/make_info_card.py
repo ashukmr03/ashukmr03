@@ -13,10 +13,10 @@ Usage:
 """
 
 FIELDS = [
-        ("Now", "Backend Developer - Java / Spring Boot"),
-        ("Stack", "Java, Spring Boot, MongoDB, Redis, Kafka"),
-        ("Studying", "B.Tech CSE, MSRIT"),
-        ("Interests", "Backend Development, DSA"),
+        ("Now", "Full Stack Developer - MERN / Solidity"),
+        ("Stack", "MERN, Solidity, HTML, CSS, JS, Java, Python"),
+        ("Studying", "BE CSE, Atria Institute of Technology (2024-2028)"),
+        ("Interests", "Blockchain, Web Dev, AI/ML, Design"),
 ]
 
 WIDTH, HEIGHT = 490, 300
@@ -69,7 +69,7 @@ def build_svg() -> str:
   <circle cx="40" cy="20" r="6" fill="#ffbd2e"/>
   <circle cx="60" cy="20" r="6" fill="#27c93f"/>
   <text x="{WIDTH/2}" y="25" text-anchor="middle" font-family="monospace"
-        font-size="12" fill="#8b949e">nilesh@github</text>
+        font-size="12" fill="#8b949e">ashukmr03@github</text>
   <line x1="20" y1="42" x2="{WIDTH-20}" y2="42" stroke="{BORDER}"/>
   {''.join(rows_svg)}
 </svg>"""

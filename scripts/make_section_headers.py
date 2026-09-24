@@ -69,8 +69,8 @@ def build_header_svg(text: str) -> str:
 
 
 SECTIONS = {
-    "header-contributions.svg": "nilesh@github ~ $ ./contributions.sh",
-    "header-whoami.svg": "nilesh@github ~ $ whoami",
+    "header-contributions.svg": "ashukmr03@github ~ $ ./contributions.sh",
+    "header-whoami.svg": "ashukmr03@github ~ $ whoami",
 }
 
 if __name__ == "__main__":

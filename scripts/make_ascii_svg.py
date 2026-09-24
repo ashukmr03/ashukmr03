@@ -70,6 +70,6 @@ def build_svg(rows: list[str]) -> str:
 if __name__ == "__main__":
     rows = image_to_ascii_rows("prepped-source.png")
     svg = build_svg(rows)
-    with open("nilesh-ascii.svg", "w") as f:
+    with open("ashukmr03-ascii.svg", "w") as f:
         f.write(svg)
-    print("ASCII portrait SVG written -> nilesh-ascii.svg")
+    print("ASCII portrait SVG written -> ashukmr03-ascii.svg")
