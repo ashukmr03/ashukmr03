@@ -2,5 +2,4 @@ venv/
 myphoto.jpeg
 prepped-source.png
 __pycache__/
-contrib-heatmap.svg
 data/
