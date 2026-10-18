@@ -2,34 +2,6 @@
   "username": "ashukmr03",
   "days": [
     {
-      "date": "2025-10-12",
-      "level": 0
-    },
-    {
-      "date": "2025-10-13",
-      "level": 0
-    },
-    {
-      "date": "2025-10-14",
-      "level": 0
-    },
-    {
-      "date": "2025-10-15",
-      "level": 0
-    },
-    {
-      "date": "2025-10-16",
-      "level": 0
-    },
-    {
-      "date": "2025-10-17",
-      "level": 0
-    },
-    {
-      "date": "2025-10-18",
-      "level": 0
-    },
-    {
       "date": "2025-10-19",
       "level": 0
     },
@@ -1483,10 +1455,14 @@
     },
     {
       "date": "2026-10-17",
+      "level": 3
+    },
+    {
+      "date": "2026-10-18",
       "level": 0
     }
   ],
-  "total_active_days": 68,
-  "current_streak": 8,
+  "total_active_days": 69,
+  "current_streak": 9,
   "longest_streak": 19
 }
